@@ -2,7 +2,7 @@
   <div id="app">
     <header>
       <h1>Vue SPA App</h1>
-      <p>Responsive Design Example</p>
+      <p>Responsive Design Example2</p>
     </header>
 
     <main>
@@ -11,19 +11,19 @@
         <p>This application is mobile-friendly and built with Vue.js.</p>
 
         <button @click="toggleMode">
-          Switch to {{ darkMode ? 'Light' : 'Dark' }} Mode
+          Switch to4 {{ darkMode ? 'Light' : 'Dark' }} Mode
         </button>
       </section>
     </main>
 
-    <darkMode
+    <darkModeBtn
       buttonType="danger"
       buttonColor="#f44336"
       textColor="#fff"
       @click="handleDangerClick"
     >
       Danger Button
-    </darkMode>
+    </darkModeBtn>
 
     <footer>
       /*<p>Made with Vue.js</p>*/
@@ -32,9 +32,10 @@
 </template>
 
 <script>
-import darkMode from './components/DarkMode.vue';
+import darkModeBtn from './components/DarkMode.vue';
 
 export default {
+  darkModeBtn,
   data() {
     return {
       darkMode: false,
