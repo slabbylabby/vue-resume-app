@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "vite",          
-    "build": "vite build",   
-    "serve": "vite preview"  
+    "dev": "vite && npm run open-browser",
+    "build": "vite build",
+    "serve": "vite preview",
+    "open-browser": "node -e \"require('open')('http://localhost:3001');\""
   },
   "dependencies": {
+    "bootstrap": "^5.3.3",
+    "bootstrap-icons": "^1.11.3",
     "core-js": "^3.8.3",
     "vue": "^3.2.13"
   },
@@ -20,6 +23,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "open": "^10.1.0",
     "vite": "^6.0.11"
   },
   "eslintConfig": {
