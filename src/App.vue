@@ -322,6 +322,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"></link>
 <script>
 
+import './styles/global.css';
+
 export default {
   name: 'app',
   data() {
