@@ -9,7 +9,7 @@ export default defineConfig({
     },
     build: {
         rollupOptions: {
-          external: ['vue-resume-app\styles\global.css']
+          external: ['/styles/global.css']
         }
     },
   });
