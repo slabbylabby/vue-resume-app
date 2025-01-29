@@ -1,6 +1,7 @@
+<!-- test component does not work yet-->
 <template>
     <button
-      :class="['base-button', buttonType]"
+      :class="['btn btn-primary', buttonType]"
       :style="{ backgroundColor: buttonColor, color: textColor }"
       @click="handleClick"
     >
