@@ -4,6 +4,7 @@
       <header class="d-flex flex-column justify-content-center" style=""> 
         <span class="text-center" style="color: #FFF"> Under Construction! come back soon for more planned features</span>
       </header>
+
       <div class="flex-container" style="margin-top: 5%; display: block ">
         <div class="row" style="padding-left: 5%">
           <!-- nav card-->
@@ -13,8 +14,8 @@
                 <div id="aboutMeContainer" class="d-flex flex-column justify-content-center" style="width: 80%; height: 15%; border: 1px solid black; background-color: #f7f7f7; float: right; margin-left: 20%">
                   <div id="openArrow" class="text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                  </svg>
+                      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
                   </div>
                   
                   <div id="closeArrow" class="text-center" style="display: none">
@@ -22,41 +23,36 @@
                       <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
                     </svg>
                   </div>
-                
                 </div>
+              </div>
             </div>
 
             <div class="d-flex flex-column col justify-content-center z-3" style="width: 50%; height: 100%; float: right">
+              <div id="aboutContainer" @click="toggleBodyContent($event, 'aboutContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
+                <span class="text-center" style="pointer-events: none">About Me</span>
+              </div>
 
-                <div id="aboutContainer" @click="toggleBodyContent($event, 'aboutContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">About Me</span>
-                </div>
+              <div id="workContainer" @click="toggleBodyContent($event, 'workContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
+                <span class="text-center" style="pointer-events: none">Work Experience</span>
+              </div>
 
-                <div id="workContainer" @click="toggleBodyContent($event, 'workContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Work Experience</span>
-                </div>
+              <div id="schoolContainer" @click="toggleBodyContent($event, 'schoolContainer')"  class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
+                <span class="text-center" style="pointer-events: none">School </span>
+              </div>
 
-                <div id="schoolContainer" @click="toggleBodyContent($event, 'schoolContainer')"  class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">School </span>
-                </div>
-
-                <div id="contactContainer" @click="toggleBodyContent($event, 'contactContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Contact Information</span>
-                </div>
-                <div id="portfolioContainer" @click="toggleBodyContent($event, 'portfolioContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Portfolio</span>
-                </div>
+              <div id="contactContainer" @click="toggleBodyContent($event, 'contactContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
+                <span class="text-center" style="pointer-events: none">Contact Information</span>
+              </div>
+              <div id="portfolioContainer" @click="toggleBodyContent($event, 'portfolioContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
+                <span class="text-center" style="pointer-events: none">Portfolio</span>
+              </div>
             </div>
-            </div>
- 
           </div>
 
            <!-- main card-->
            <div class="col-md-3 z-4" style="height: 75vh;">
 
-            <div class="container" style="height: 100%; width: 100%; border: 1px solid black; border-bottom-right-radius: 5px; overflow: hidden; border-top-right-radius: 5px;"
-            
-            >
+            <div class="container" style="height: 100%; width: 100%; border: 1px solid black; border-bottom-right-radius: 5px; overflow: hidden; border-top-right-radius: 5px;">
             <!-- top picture-->
             <section class="row" style="height: 55%; border-radius: 10px;">
               <img src="/workspaces/vue-resume-app/src/assets/confused.png" style=" width: 100%; height: 100%; padding: 0;">
