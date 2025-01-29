@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "open-browser": "node -e \"require('open')('http://localhost:3001');\""
+    "serve": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
