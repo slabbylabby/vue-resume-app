@@ -1,53 +1,79 @@
 <template>
   <div id="app">
     <main class="min-vh-100 p-1">
-      <header class="d-flex flex-column justify-content-center" style=""> 
+      <header class="d-flex flex-column justify-content-center"> 
         <span class="text-center" style="color: #FFF"> Under Construction! come back soon for more planned features</span>
       </header>
-
-      <div class="flex-container" style="margin-top: 5%; display: block ">
+      
+      <div class="d-block flex-container positive-relative z-n1" style="margin-top: 5%; overflow-x: hidden; overflow-y: hidden">
         <div class="row" style="padding-left: 5%">
           <!-- nav card-->
-          <div class="col-md-1 mt-5 z-2" style="height: 60vh; padding-left: 0%; padding-right: 0%; position: relative; left: 0%;">
-            <div class="d-flex flex-row " style="height: 100%; width: 100%; padding-left: 0px; padding-right: 0px;">
-              <div class="d-flex flex-column col justify-content-right z-3" style="width: 40%; height: 100%; margin-top: 70%">
-                <div id="arrowContainer" class="d-flex flex-column justify-content-center" style="width: 80%; height: 15%; border: 1px solid black; background-color: #f7f7f7; float: right; margin-left: 20%">
+          <div id="navContainer2" class="col-md-5 mt-5 position-absolute px-0" style="height: 60vh; left: 0%;">
+            <div class="d-flex flex-row h-100 w-100 px-0 position-absolute">
+              <!-- arrow container -->
+              <div id="arrowContainer" class="d-flex flex-column justify-content-center px-2 position-relative z-1"
+                @click="revealHideNavContent($event, 'arrowContainer')" 
+                style="height: 10%; width: 10%; background-color: #f7f7f7; border-radius: 50%; overflow: hidden; left: 41%;"
+              >
 
-                  <div id="openArrow" class="text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-                    </svg>
-                  </div>
-                  
-                  <div id="closeArrow" class="text-center" style="display: none">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                      <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
-                    </svg>
-                  </div>
-
+                <div id="openArrow" class="text-center" style="display: flex; pointer-events: none" >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                  </svg>
                 </div>
+                
+                <div id="closeArrow" class="text-center" style="display: none; pointer-events: none">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                  </svg>
+                </div>
+
               </div>
+              <!-- nav items container-->
+              <div 
+                id="navContainer" 
+                class="d-flex flex-column justify-content-center w-100 h-100 mt-3 z-n2"
+                 style=""
+                >
 
-              <div class="d-flex flex-column col justify-content-center z-3" style="width: 50%; height: 100%; float: right">
-
-                <div id="aboutContainer" @click="toggleBodyContent($event, 'aboutContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">About Me2</span>
+                <div id="aboutContainer" 
+                  @click="toggleBodyContent($event, 'aboutContainer')" 
+                  class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons" 
+                  style="transition: 1.5s ease;"
+                >
+                  <span class="text-center" style="pointer-events: none;">About Me</span>
                 </div>
 
-                <div id="workContainer" @click="toggleBodyContent($event, 'workContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Work Experience</span>
+                <div id="workContainer" 
+                  @click="toggleBodyContent($event, 'workContainer')" 
+                  class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons" 
+                  style="transition: 1.3s ease;"
+                >
+                  <span class="text-center" style="pointer-events: none;">Work Experience</span>
                 </div>
 
-                <div id="schoolContainer" @click="toggleBodyContent($event, 'schoolContainer')"  class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">School </span>
+                <div id="schoolContainer" 
+                  @click="toggleBodyContent($event, 'schoolContainer')"  
+                  class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons" 
+                  style="transition: 1.1s ease;"
+                >
+                  <span class="text-center" style="pointer-events: none;">School </span>
                 </div>
 
-                <div id="contactContainer" @click="toggleBodyContent($event, 'contactContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Contact Information</span>
+                <div id="contactContainer" 
+                  @click="toggleBodyContent($event, 'contactContainer')" 
+                  class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons" 
+                  style="transition: 0.9s ease;"
+                >
+                  <span class="text-center" style="pointer-events: none;">Contact Info</span>
                 </div>
 
-                <div id="portfolioContainer" @click="toggleBodyContent($event, 'portfolioContainer')" class="d-flex flex-column justify-content-center" style="width: 100%; height: 15%; border: 1px solid black; background-color: #f7f7f7;">
-                  <span class="text-center" style="pointer-events: none">Portfolio</span>
+                <div id="portfolioContainer" 
+                  @click="toggleBodyContent($event, 'portfolioContainer')" 
+                  class="d-flex flex-column justify-content-center position-relative nav-Icons" 
+                  style="transition: 0.7s ease;"
+                >
+                  <span class="text-center" style="pointer-events: none;">Portfolio</span>
                 </div>
 
               </div>
@@ -55,7 +81,7 @@
           </div>
 
           <!-- main card-->
-          <div class="col-md-3 z-4" style="height: 75vh;">
+          <div class="col-md-3 position-relative z-3" style="height: 75vh; left: 15%;">
             <div class="container" style="height: 100%; width: 100%; border: 1px solid black; border-bottom-right-radius: 5px; overflow: hidden; border-top-right-radius: 5px;">
               <!-- top picture-->
               <section class="row" style="height: 55%; border-radius: 10px;">
@@ -393,7 +419,10 @@
   </div>
 </template>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
 <script>
+
+import "../styles/global.css"
 
 export default {
   name: 'app',
@@ -405,6 +434,9 @@ export default {
       bodyCardVisible: false,
       headerVisible: false,
       bodyVisible: false,
+
+      //arrow functions
+      toggleNavMenu: false,
     };
   },
   methods: {
@@ -437,17 +469,70 @@ export default {
         Array.from(body.children[i].children).forEach((el => {
     
           if(el.id === newIdHeader || el.id === newIdBody){
-            console.log('element id ' + el.id)
-            console.log('new header ' + newIdHeader)
-            console.log('new body ' + newIdBody)
             el.style.display = 'flex'
           } else {
-            console.log('bad hit')
             el.style.display = 'none';
           }
 
         }));
       }
+    },
+
+    revealHideNavContent(){ 
+   
+      const navContainer = document.getElementById('navContainer');
+      const openArrow = document.getElementById('openArrow');
+      const closeArrow = document.getElementById('closeArrow');
+      const navItems = document.getElementsByClassName('nav-Icons');
+
+      navContainer.style.position = "absolute";
+      console.log(navContainer.children)
+      if(!this.toggleNavMenu){
+        //navContainer.style.left = "0%";
+        closeArrow.style.display = 'flex';
+        openArrow.style.display = 'none';
+        /*
+        for(const [i, el] of navContainer.children.entries()) {
+          el.style.cssText = `transition: ${i == 0 ? '0.3s' : 0.3 + (i + 2)} ease`
+          el.style.left ="45%";
+        }
+        */
+        
+        Array.from(navItems).forEach(((el, i) => {
+          console.log(el.style.transition)
+          console.log(i)
+          //el.style.cssText = `transition: ${i == 0 ? '0.3s' : 0.3 + (i + 2)} ease`;
+          el.style.left ="22%";
+          
+        }));
+        
+      } else {
+        //navContainer.style.left = "100%";
+        closeArrow.style.display = 'none';
+        openArrow.style.display = 'flex';
+        //this.bodyCardVisible = false;
+        document.getElementById('bodyCard').style.display = "none";
+        /*
+        for(const [i, el] of navContainer.children.entries()) {
+          el.style.left ="45%";
+          //el.style.cssText ="transition: 0.5s ease"
+        }*/
+        
+        Array.from(navContainer.children).forEach((el => {
+          el.style.left ="45%";
+          //setTimeout(el.style.cssText = `transition: 0.5s ease`,1000);
+        }));
+        
+      }
+      navContainer.style.position = 'relative';
+      this.toggleNavMenu = !this.toggleNavMenu;
+
+    
+      
+    },
+
+    getIndividualChildren(){
+
     },
   },
 };
