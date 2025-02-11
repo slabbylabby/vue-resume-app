@@ -11,6 +11,16 @@
   
   <script>
   export default {
+    name: 'DarkMode',
+    components: {
+
+    },
+    data: () => ({
+
+    }),
+    computed: {
+      
+    },
     props: {
       // Define the type of the button (e.g., 'primary', 'secondary', 'danger')
       buttonType: {
