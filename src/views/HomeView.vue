@@ -61,13 +61,13 @@
           <!-- nav items container-->
           <div
             id="navContainer"
-            class="d-flex flex-column justify-content-center w-100 h-100 mt-3 z-n2"
+            class="d-flex flex-column justify-content-center w-100 h-100 z-n2"
             style=""
           >
             <div
               id="aboutContainer"
               @click="toggleBodyContent($event, 'aboutContainer')"
-              class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
               style="transition: 1.5s ease"
             >
               <span class="text-center" style="pointer-events: none">About Me</span>
@@ -76,7 +76,7 @@
             <div
               id="workContainer"
               @click="toggleBodyContent($event, 'workContainer')"
-              class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
               style="transition: 1.3s ease"
             >
               <span class="text-center" style="pointer-events: none">Work Experience</span>
@@ -85,12 +85,12 @@
             <div
               id="schoolContainer"
               @click="toggleBodyContent($event, 'schoolContainer')"
-              class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
               style="transition: 1.1s ease"
             >
               <span class="text-center" style="pointer-events: none">School </span>
             </div>
-
+            <!--
             <div
               id="contactContainer"
               @click="toggleBodyContent($event, 'contactContainer')"
@@ -99,7 +99,7 @@
             >
               <span class="text-center" style="pointer-events: none">Contact Info</span>
             </div>
-
+            -->
             <div
               id="portfolioContainer"
               @click="toggleBodyContent($event, 'portfolioContainer')"
@@ -1039,7 +1039,7 @@
                   border-bottom-right-radius: 5%;
                 "
               >
-                <ul class="list-group list-group-flush">
+                <ul class="list-group list-group-flush ms-4">
                   <div class="mb-3">
                     <h4 class="mb-2">Pedcor Management Home</h4>
                     <li class="list-group-item ms-3">
