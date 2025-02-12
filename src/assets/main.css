@@ -9,7 +9,7 @@
   padding: 2rem;
   font-weight: normal;
 }
-
+/*
 .nav-icons {
   height: 15%;
   width: 15%;
@@ -21,7 +21,7 @@
   overflow: hidden;
   pointer-events: auto;
 }
-
+*/
 .body-container {
   width: 60%;
   left: 8%;
@@ -40,6 +40,24 @@ p {
   background-color: whitesmoke;
   border-radius: 1%;
 }
+
+.nav-icons {
+  height: 15%;
+  width: 15%;
+  border: 2px solid #0093d1;
+  box-shadow: 0 0 15px #00b5e2;
+  border-radius: 30%;
+  background-color: #f7f7f7;
+  left: 45%;
+  overflow: hidden;
+}
+
+.bottom-info-box {
+  height: 35%;
+  background-color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+}
+
 a,
 .green {
   text-decoration: none;

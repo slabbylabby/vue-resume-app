@@ -67,7 +67,7 @@
             <div
               id="aboutContainer"
               @click="toggleBodyContent($event, 'aboutContainer')"
-              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-icons"
               style="transition: 1.5s ease"
             >
               <span class="text-center" style="pointer-events: none">About Me</span>
@@ -76,7 +76,7 @@
             <div
               id="workContainer"
               @click="toggleBodyContent($event, 'workContainer')"
-              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-icons"
               style="transition: 1.3s ease"
             >
               <span class="text-center" style="pointer-events: none">Work Experience</span>
@@ -85,7 +85,7 @@
             <div
               id="schoolContainer"
               @click="toggleBodyContent($event, 'schoolContainer')"
-              class="d-flex flex-column justify-content-center mb-4 position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center mb-4 position-relative nav-icons"
               style="transition: 1.1s ease"
             >
               <span class="text-center" style="pointer-events: none">School </span>
@@ -94,7 +94,7 @@
             <div
               id="portfolioContainer"
               @click="toggleBodyContent($event, 'portfolioContainer')"
-              class="d-flex flex-column justify-content-center position-relative nav-Icons"
+              class="d-flex flex-column justify-content-center position-relative nav-icons"
               style="transition: 0.7s ease"
             >
               <span class="text-center" style="pointer-events: none">Portfolio</span>
@@ -115,10 +115,7 @@
           </section>
 
           <!-- bottom info-->
-          <section
-            class="row"
-            style="height: 35%; background-color: #f7f7f7; font-family: 'Poppins', sans-serif"
-          >
+          <section class="row bottom-info-box">
             <div class="row pt-5">
               <div class="d-flex flex-column justify-content-top">
                 <div class="align-self-center pt-5">
@@ -217,37 +214,21 @@
             <!-- headers -->
             <div class="col-md-12 d-flex p-1 h-100 w-100" style="border-bottom: 1px solid black">
               <!-- about me header -->
-              <div
-                id="aboutHeader"
-                class="justify-content-left ms-4"
-                style="width: 90%; display: none"
-              >
+              <div id="aboutHeader" class="justify-content-left ms-4" style="display: none">
                 <h4 class="align-self-center" style="">About me</h4>
               </div>
               <!-- work experience header -->
-              <div
-                id="workHeader"
-                class="justify-content-left ms-4"
-                style="width: 90%; display: none"
-              >
+              <div id="workHeader" class="justify-content-left ms-4" style="display: none">
                 <h4 class="align-self-center">Work Experience</h4>
               </div>
 
               <!-- school header -->
-              <div
-                id="schoolHeader"
-                class="justify-content-left ms-4"
-                style="width: 90%; display: none"
-              >
+              <div id="schoolHeader" class="justify-content-left ms-4" style="display: none">
                 <h4 class="align-self-center">School</h4>
               </div>
 
               <!-- portfolio header -->
-              <div
-                id="portfolioHeader"
-                class="justify-content-left ms-4"
-                style="width: 90%; display: none"
-              >
+              <div id="portfolioHeader" class="justify-content-left ms-4" style="display: none">
                 <h4 class="align-self-center">Portfolio</h4>
               </div>
             </div>
@@ -1098,7 +1079,7 @@ export default {
       const navContainer = document.getElementById('navContainer') as HTMLElement
       const openArrow = document.getElementById('openArrow') as HTMLElement
       const closeArrow = document.getElementById('closeArrow') as HTMLElement
-      const navItems = document.getElementsByClassName('nav-Icons')
+      const navItems = document.getElementsByClassName('nav-icons')
 
       navContainer.style.position = 'absolute'
 

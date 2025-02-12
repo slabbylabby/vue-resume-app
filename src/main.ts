@@ -10,7 +10,7 @@ import router from './router'
 import '@/assets/main.css'
 
 // Import Global Styles
-import '@/styles/global.css'
+//import '@/styles/global.css'
 
 const app = createApp(App)
 
