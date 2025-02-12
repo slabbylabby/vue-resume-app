@@ -33,14 +33,14 @@
 .body-headers {
   width: 90%;
 }
-
+/*
 p {
   word-wrap: break-word;
   height: 100%;
   background-color: whitesmoke;
   border-radius: 1%;
 }
-
+*/
 .nav-icons {
   height: 15%;
   width: 15%;
@@ -56,6 +56,11 @@ p {
   height: 35%;
   background-color: #f7f7f7;
   font-family: 'Poppins', sans-serif;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
 }
 
 a,
