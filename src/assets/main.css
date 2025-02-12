@@ -2,12 +2,44 @@
 @import 'bootstrap/dist/css/bootstrap.css';
 
 #app {
-  max-width: 1280px;
+  background: linear-gradient(to bottom right, #0093d1, #00b5e2);
+  height: 100vh;
+  width: 100vw;
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
 }
 
+.nav-icons {
+  height: 15%;
+  width: 15%;
+  border: 2px solid #0093d1;
+  box-shadow: 0 0 15px #00b5e2;
+  border-radius: 30%;
+  background-color: #f7f7f7;
+  left: 45%;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.body-container {
+  width: 60%;
+  left: 8%;
+  background-color: #f7f7f7;
+  border: 1px solid black;
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+.body-headers {
+  width: 90%;
+}
+
+p {
+  word-wrap: break-word;
+  height: 100%;
+  background-color: whitesmoke;
+  border-radius: 1%;
+}
 a,
 .green {
   text-decoration: none;

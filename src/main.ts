@@ -7,7 +7,7 @@ import { createPinia } from '../node_modules/pinia'
 import App from './App.vue'
 import router from './router'
 
-import './assets/main.css'
+import '@/assets/main.css'
 
 // Import Global Styles
 import '@/styles/global.css'

@@ -90,16 +90,7 @@
             >
               <span class="text-center" style="pointer-events: none">School </span>
             </div>
-            <!--
-            <div
-              id="contactContainer"
-              @click="toggleBodyContent($event, 'contactContainer')"
-              class="d-flex flex-column justify-content-center mb-2 position-relative nav-Icons"
-              style="transition: 0.9s ease"
-            >
-              <span class="text-center" style="pointer-events: none">Contact Info</span>
-            </div>
-            -->
+
             <div
               id="portfolioContainer"
               @click="toggleBodyContent($event, 'portfolioContainer')"
@@ -115,42 +106,23 @@
       <!-- main card-->
 
       <div class="col-md-3 position-relative z-3" style="height: 75vh; left: 15%">
-        <div
-          class="container"
-          style="
-            height: 100%;
-            width: 100%;
-            border-bottom-right-radius: 5px;
-            overflow: hidden;
-            border-top-right-radius: 5px;
-          "
-        >
+        <div class="container h-100 w-100 overflow-hidden">
           <!-- top picture-->
-          <section
-            class="row px-0"
-            style="height: 50%; border-radius: 10px; background-color: whitesmoke"
-          >
+          <section class="row px-0 h-50" style="background-color: whitesmoke">
             <div class="d-flex justify-content-center px-0" style="background-color: black">
-              <img
-                src="@/assets/mainPhotos/meLinkedIn.png"
-                style="width: 90%; height: 100%; padding: 0"
-              />
+              <img src="@/assets/mainPhotos/meLinkedIn.png" class="h-100" style="width: 90%" />
             </div>
           </section>
 
           <!-- bottom info-->
           <section
             class="row"
-            style="
-              height: 35%;
-              background-color: #f7f7f7;
-              font-family: 'Poppins', sans-serif; /* background-image: url('../src/assets/cropped-leaf.png'); background-repeat: no-repeat; background-size: 60%; background-position: 35% 65%;*/
-            "
+            style="height: 35%; background-color: #f7f7f7; font-family: 'Poppins', sans-serif"
           >
             <div class="row pt-5">
               <div class="d-flex flex-column justify-content-top">
                 <div class="align-self-center pt-5">
-                  <h1 class="text-center">Seth Bartel2</h1>
+                  <h1 class="text-center">Seth Bartel</h1>
                   <h4 class="text-center">Web Developer</h4>
 
                   <a
@@ -225,14 +197,13 @@
       <!-- body card-->
       <div
         id="bodyCard"
-        class="col-md-8 z-1 p-1 mt-2 position-relative"
-        style="height: 70vh; right: 5%; display: none; overflow: hidden"
+        class="col-md-8 z-1 p-1 mt-2 position-relative overflow-hidden"
+        style="height: 70vh; right: 5%; display: none"
       >
         <div
           id="bodyContainer"
-          class="container position-relative z-2"
+          class="container position-relative z-2 h-100"
           style="
-            height: 100%;
             width: 60%;
             left: 8%;
             background-color: #f7f7f7;
@@ -244,23 +215,20 @@
           <!-- header sections -->
           <div id="headerContent" class="row mt-4">
             <!-- headers -->
-            <div
-              class="col-md-12 d-flex p-1"
-              style="height: 100%; width: 100%; border-bottom: 1px solid black"
-            >
+            <div class="col-md-12 d-flex p-1 h-100 w-100" style="border-bottom: 1px solid black">
               <!-- about me header -->
               <div
                 id="aboutHeader"
-                class="justify-content-left"
-                style="width: 90%; margin-left: 5%; display: none"
+                class="justify-content-left ms-4"
+                style="width: 90%; display: none"
               >
                 <h4 class="align-self-center" style="">About me</h4>
               </div>
               <!-- work experience header -->
               <div
                 id="workHeader"
-                class="justify-content-left"
-                style="width: 90%; margin-left: 5%; display: none"
+                class="justify-content-left ms-4"
+                style="width: 90%; display: none"
               >
                 <h4 class="align-self-center">Work Experience</h4>
               </div>
@@ -268,26 +236,17 @@
               <!-- school header -->
               <div
                 id="schoolHeader"
-                class="justify-content-left"
-                style="width: 90%; margin-left: 5%; display: none"
+                class="justify-content-left ms-4"
+                style="width: 90%; display: none"
               >
                 <h4 class="align-self-center">School</h4>
               </div>
-              <!-- contact information header -->
-              <!-- removed contact header changing this later
-              <div
-                id="aboutHeader"
-                class="justify-content-left"
-                style="width: 90%; margin-left: 5%; display: none"
-              >
-                <h4 class="align-self-center">Contact Information</h4>
-              </div>
-              -->
+
               <!-- portfolio header -->
               <div
                 id="portfolioHeader"
-                class="justify-content-left"
-                style="width: 90%; margin-left: 5%; display: none"
+                class="justify-content-left ms-4"
+                style="width: 90%; display: none"
               >
                 <h4 class="align-self-center">Portfolio</h4>
               </div>
@@ -297,18 +256,11 @@
           <!-- Begin body sections-->
           <div
             id="bodyContent"
-            class="container pt-1 p-4 ps-0 z-2"
-            style="
-              height: 90%;
-              width: 100%;
-              background-color: whitesmoke;
-              display: flex;
-              background-color: lightgray;
-              border-bottom-right-radius: 5%;
-            "
+            class="container pt-1 p-4 ps-0 z-2 w-100"
+            style="height: 90%; background-color: lightgray; border-bottom-right-radius: 5%"
           >
-            <div id="aboutBody" class="row" style="display: none; height: 60%; width: 100%">
-              <div class="col-md-12 mt-1 mb-3 p-3 ms-2" style="height: 65%; width: 100%">
+            <div id="aboutBody" class="row w-100" style="display: none; height: 60%">
+              <div class="col-md-12 mt-1 mb-3 p-3 ms-2 w-100" style="height: 65%">
                 <p
                   class="p-3"
                   style="
@@ -327,10 +279,10 @@
                 </p>
               </div>
 
-              <div class="col-md-12 mt-2" style="height: 50%; width: 100%">
+              <div class="col-md-12 mt-2 w-100" style="height: 50%">
                 <h4
-                  class="text-center mb-5 p-2"
-                  style="width: 100%; border-bottom: 1px solid gray; margin-left: 1%"
+                  class="text-center mb-5 p-2 w-100"
+                  style="border-bottom: 1px solid gray; margin-left: 1%"
                 >
                   Language proficiencies
                 </h4>
@@ -537,7 +489,7 @@
               </div>
             </div>
 
-            <div id="workBody" class="row" style="display: none; height: 95%; width: 100%">
+            <div id="workBody" class="row w-100" style="display: none; height: 95%">
               <div class="d-flex flex-column justify-content-top h-100 mt-3" style="display: flex">
                 <!-- IVM Accordion -->
                 <div
@@ -910,8 +862,8 @@
               </div>
             </div>
 
-            <div id="schoolBody" class="row" style="display: none; height: 60%; width: auto">
-              <div class="col-md-12 mt-1 p-3 ms-2" style="height: 60%; width: 100%">
+            <div id="schoolBody" class="row w-auto" style="display: none; height: 60%">
+              <div class="col-md-12 mt-1 p-3 ms-2 w-100" style="height: 60%">
                 <div
                   class="p-3"
                   style="
@@ -929,10 +881,10 @@
                 </div>
               </div>
 
-              <div class="col-md-12" style="height: 90%; width: 100%">
+              <div class="col-md-12 w-100" style="height: 90%">
                 <h4
-                  class="text-center p-2"
-                  style="width: 100%; border-bottom: 1px solid gray; margin-left: 1%"
+                  class="text-center p-2 w-100"
+                  style="border-bottom: 1px solid gray; margin-left: 1%"
                 >
                   School Photos
                 </h4>
@@ -1022,18 +974,17 @@
               </div>
             </div>
 
-            <div id="portfolioBody" class="row" style="display: none; height: auto; width: auto">
-              <div class="col-md-12 mt-1 p-3 ms-2" style="width: 100%">
+            <div id="portfolioBody" class="row h-auto w-auto" style="display: none">
+              <div class="col-md-12 mt-1 p-3 ms-2 w-100">
                 <div class="text-center w-100">
                   <h3>Notable Sites I've created or contributed to:</h3>
                 </div>
               </div>
 
               <div
-                class="col-md-12 p-3"
+                class="col-md-12 p-3 w-100"
                 style="
                   height: 90%;
-                  width: 100%;
                   background-color: whitesmoke;
                   border-top-right-radius: 5%;
                   border-bottom-right-radius: 5%;
