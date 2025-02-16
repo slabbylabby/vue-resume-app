@@ -119,18 +119,26 @@
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="@/assets/mainPhotos/confused.png"
+                      src="@/assets/mainPhotos/graduationSebsPNG.png"
                       style="width: 100%"
-                      class="d-block m-auto"
-                      alt="..."
+                      class="d-block"
+                      alt="me on graduation day"
                     />
                   </div>
                   <div class="carousel-item">
                     <img
-                      src="@/assets/mainPhotos/confused.png"
+                      src="@/assets/mainPhotos/sebsNBubbaPNG.png"
                       style="width: 100%"
-                      class="d-block m-auto"
-                      alt="..."
+                      class="d-block"
+                      alt="Me and my Dog Bubba"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="@/assets/mainPhotos/sebsWithBootNHarrisPNG.png"
+                      style="width: 100%"
+                      class="d-block"
+                      alt="Me and two twin beagles"
                     />
                   </div>
                 </div>
