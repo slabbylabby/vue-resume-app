@@ -6,9 +6,8 @@ body {
 }
 
 #app {
-  background: linear-gradient(to bottom right, #0093d1, #00b5e2);
-  height: 100vh;
-  width: 100vw;
+  min-height: 100vh;
+  width: 100%;
   margin: 0;
 }
 
@@ -67,4 +66,78 @@ div .nav-Icons:hover {
 .dark-mode {
   background-color: #121212;
   color: white;
+}
+
+/* HomeView global styles moved here from src/views/HomeView.vue */
+
+/* Base styles for all viewports */
+html,
+body {
+  width: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+  -webkit-overflow-scrolling: auto;
+}
+
+#app {
+  width: 900px;
+  height: 1000px;
+  margin: 0;
+}
+
+/* MOBILE STYLES (0px - 768px) */
+@media (max-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
+    overflow-y: auto !important; /* enable vertical scrolling */
+    overflow-x: hidden !important; /* prevent horizontal scroll */
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    background-repeat: repeat-y; /* tile gradient vertically */
+    background-size: 100% auto; /* stretch width, repeat height */
+    background-attachment: scroll; /* scroll with content */
+  }
+
+  #app {
+    width: 100%;
+    min-height: 100%;
+    overflow: visible !important;
+  }
+}
+
+/* DESKTOP STYLES (769px and above) */
+@media (min-width: 769px) {
+  html,
+  body {
+    min-height: 100%;
+    overflow: visible !important;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #app {
+    min-height: 100vh;
+    overflow: visible !important;
+  }
+}
+
+/* Prevent wide media from forcing scrollbars */
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Hide Vue DevTools overlay (prevents injected panels from causing page overflow) */
+[class^='vue-devtools'],
+[class*=' vue-devtools'],
+[class*='vue-devtools__'] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
