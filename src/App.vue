@@ -15,20 +15,8 @@ import { RouterView } from 'vue-router'
   padding: 0;
 }
 
-/* Mobile: lock to viewport height to prevent scrolling */
-@media (max-width: 768px) {
-  .app-main {
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-  }
-}
-
-/* Desktop: allow natural height and scrolling */
-@media (min-width: 769px) {
-  .app-main {
-    min-height: 100vh;
-    overflow: visible;
-  }
+/* All viewports: allow natural scrolling */
+.app-main {
+  min-height: 100vh;
 }
 </style>
