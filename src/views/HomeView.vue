@@ -279,8 +279,7 @@ export default {
       this.activeSection = section
     },
     downloadFile(): void {
-      const fileUrl = new URL('@/assets/resumePdfs/SethBartelResumeCSITFeb1.pdf', import.meta.url)
-        .href
+      const fileUrl = new URL('@/assets/resumePdfs/sethbartelcsresume.pdf', import.meta.url).href
       const fileName = 'SethBartelResume.pdf'
       const link = document.createElement('a')
       link.href = fileUrl
