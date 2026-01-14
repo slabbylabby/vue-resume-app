@@ -116,48 +116,7 @@
             </p>
             <h3 class="section-subtitle">Technical Skills</h3>
             <div class="skills-grid">
-              <div class="skill-item bg-light rounded p-3 border-start border-3 border-primary">
-                <div class="skill-header d-flex justify-content-between mb-2">
-                  <span class="skill-name">JavaScript</span>
-                  <span class="skill-level">90%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">Vue.js</span>
-                  <span class="skill-level">90%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">React</span>
-                  <span class="skill-level">60%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 60%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">TypeScript</span>
-                  <span class="skill-level">85%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">Node.js</span>
-                  <span class="skill-level">75%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 75%"></div></div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-header">
-                  <span class="skill-name">C# / .NET</span>
-                  <span class="skill-level">70%</span>
-                </div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 70%"></div></div>
-              </div>
+              <SkillItem v-for="skill in skills" :key="skill.name" :skill="skill" />
             </div>
           </div>
 
@@ -265,13 +224,25 @@
 
 <script lang="ts">
 import '@/styles/global.css'
+import SkillItem from '@/components/SkillItem.vue'
 
 export default {
   name: 'HomeView',
+  components: {
+    SkillItem,
+  },
   data() {
     return {
       darkMode: false,
       activeSection: 'about' as 'about' | 'experience' | 'education' | 'portfolio',
+      skills: [
+        { name: 'JavaScript', level: 90 },
+        { name: 'Vue.js', level: 90 },
+        { name: 'React', level: 60 },
+        { name: 'TypeScript', level: 85 },
+        { name: 'Node.js', level: 75 },
+        { name: 'C# / .NET', level: 70 },
+      ],
     }
   },
   methods: {
