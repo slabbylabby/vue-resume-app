@@ -79,7 +79,7 @@
 
       <!-- Right: Tabs and Content -->
       <section class="right-content-section">
-        <nav class="horizontal-tabs d-flex bg-white rounded shadow-sm p-3 gap-2 mb-4 flex-wrap">
+        <nav class="horizontal-tabs d-flex bg-white rounded shadow-sm mb-3 flex-wrap">
           <button
             @click="setActiveSection('about')"
             :class="['tab-button btn', { active: activeSection === 'about' }]"

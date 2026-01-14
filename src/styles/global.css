@@ -292,7 +292,7 @@ iframe {
   border-top: 4px solid var(--secondary-color);
   overflow: hidden;
   height: auto;
-  min-height: 50px;
+  min-height: 60px;
 }
 
 .tab-button {
@@ -309,10 +309,10 @@ iframe {
   font-weight: 600;
   cursor: pointer;
   border-radius: 0;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   flex: 1;
   min-width: 100px;
-  height: 100%;
+  min-height: 100%;
 }
 
 .tab-button:last-child {
@@ -320,7 +320,8 @@ iframe {
 }
 
 .tab-button:hover {
-  transform: translateY(-2px);
+  color: black;
+  background-color: var(--border-color);
 }
 
 .tab-button.btn.active {
@@ -716,4 +717,12 @@ iframe {
   .content-section {
     min-height: 500px;
   }
+}
+
+/* Override Bootstrap active button styling for tab buttons */
+.horizontal-tabs .tab-button.btn.active,
+.horizontal-tabs .tab-button.active {
+  background: var(--secondary-color) !important;
+  background-color: var(--secondary-color) !important;
+  color: white !important;
 }
