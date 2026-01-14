@@ -643,7 +643,7 @@ iframe {
     white-space: normal;
     border-radius: 0;
     border-right: 1px solid var(--border-color);
-    height: 100%;
+    min-height: 100%;
   }
 
   .horizontal-tabs .tab-button:nth-child(odd):last-child,
@@ -694,7 +694,7 @@ iframe {
     min-width: 0;
     padding: 0;
     font-size: 0.75rem;
-    height: 100%;
+    min-height: 100%;
   }
 }
 
