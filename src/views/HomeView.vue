@@ -110,9 +110,10 @@
           <div v-if="activeSection === 'about'" class="section-content fade-in">
             <h2>About Me</h2>
             <p class="intro-text">
-              Hello! I'm Seth Bartel from the Indianapolis area. I've been working as a web
-              developer since late 2019, specializing in Front-End development. Over the past two
-              years at IVM Inc., I've expanded my skills to full-stack development.
+              Hello! I’m Seth Bartel, a full-stack developer with professional experience since
+              2019. I started in front-end development and grew into full-stack engineering at IVM,
+              later gaining deeper troubleshooting and client-focused experience as a Software
+              Support Engineer at UCIS and through pro bono freelance work.
             </p>
             <h3 class="section-subtitle">Technical Skills</h3>
             <div class="skills-grid">
@@ -124,32 +125,109 @@
             <h2>Professional Experience</h2>
             <div class="experience-item">
               <div class="experience-header d-flex flex-column gap-1 mb-3">
-                <span class="company-name">IVM Inc.</span>
-                <span class="date-range">2021 - Present</span>
+                <h3>Software Support Specialist</h3>
+                <span class="company-name">UCIS</span>
+                <span class="date-range">January 2025 - December 2025</span>
               </div>
               <p class="experience-description">
-                Led front-end development and expanded into full-stack responsibilities with Vue.js,
-                TypeScript, and .NET.
+                Debugged and resolved defects across mobile and desktop applications by analyzing
+                logs, reproducing issues, and validating fixes through functional and regression
+                testing.
               </p>
               <ul class="experience-list">
-                <li>Developed responsive web applications serving thousands of users</li>
-                <li>Implemented real-time data visualization dashboards</li>
-                <li>Mentored junior developers and led code reviews</li>
+                <li>
+                  Investigated and identified an unauthorized third-party AI chatbot embedded by a
+                  external vendor that was significantly degrading website performance.
+                </li>
+                <li>
+                  Produced monthly bug reports with detailed, engineer-level analysis of issues
+                  within a Java Spring Boot and Angular application, enabling efficient triage and
+                  resolution.
+                </li>
+                <li>
+                  Served as the primary technical resource for diagnosing complex software defects
+                  and translating findings into actionable reports for external development teams.
+                </li>
+              </ul>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header d-flex flex-column gap-1 mb-3">
+                <h3>Full Stack Developer</h3>
+                <span class="company-name">Freelance</span>
+                <span class="date-range">2024 - Present</span>
+              </div>
+              <p class="experience-description">
+                Software Support Specialist with strong engineering insight and a track record of
+                diagnosing and resolving complex application issues. Skilled at bridging support and
+                development through root cause analysis and developer-ready diagnostics. Also
+                provide pro bono freelance software and web development for individuals and small
+                organizations. Known for clear communication and practical problem-solving.
+              </p>
+              <ul class="experience-list">
+                <li>
+                  Delivered tailored solutions based on client needs, industry best practices, and
+                  project goals.
+                </li>
+                <li>
+                  Provided ongoing support, troubleshooting, and enhancements as requested by
+                  clients
+                </li>
+                <li>
+                  Performed independent software and web development work on a volunteer and
+                  favor-based basis for select clients.
+                </li>
+              </ul>
+            </div>
+            <div class="experience-item">
+              <div class="experience-header d-flex flex-column gap-1 mb-3">
+                <h3>Full Stack Developer</h3>
+                <span class="company-name">IVM Inc.</span>
+                <span class="date-range">2022 - 2024</span>
+              </div>
+              <p class="experience-description">
+                Led the development of all front-end web applications written with Vue3, React, and
+                MVC overseeing architecture and design to ensure alignment with business goals,
+                client feedback, and technical requirements.
+              </p>
+              <ul class="experience-list">
+                <li>
+                  Revamped the login system with a token-based authentication mechanism and improved
+                  session management, enhancing security, user experience, and reducing
+                  login-related support tickets by 20%.
+                </li>
+                <li>
+                  Designed and implemented a custom file input component with built-in validation,
+                  streamlining user onboarding and maintenance, reducing onboarding time by 6 hours
+                  and lowering related support tickets by 95%.
+                </li>
+                <li>
+                  Worked with a team to redevelop a legacy system into a web application boosting
+                  productivity for our office team and decreasing page load times by up to 50%.
+                </li>
               </ul>
             </div>
             <div class="experience-item">
               <div class="experience-header d-flex flex-column gap-1 mb-3">
                 <h3>Junior Web Developer</h3>
-                <span class="company-name">Web Development Startup</span>
-                <span class="date-range">2019 - 2021</span>
+                <span class="company-name">Pedcor</span>
+                <span class="date-range">2019 - 2022</span>
               </div>
               <p class="experience-description">
-                Built websites and web applications using vanilla JavaScript and Vue.js for various
-                clients.
+                Managed a portfolio of up to 6 web applications, overseeing development,
+                maintenance, and updates to ensure optimal performance, functionality, and user
+                experience across all projects.
               </p>
               <ul class="experience-list">
-                <li>Built custom websites and web applications</li>
-                <li>Learned modern web technologies and best practices</li>
+                <li>
+                  Integrated Zendesk's API to develop custom metrics and dashboards, enabling the
+                  management team to cut response time by 15% and improve decision-making through
+                  data-driven insights.
+                </li>
+                <li>
+                  Developed a React Native mobile app integrating Zendesk's API, enabling help desk
+                  associates to track and manage support tickets, improving ticket resolution
+                  efficiency by up to 30%.
+                </li>
               </ul>
             </div>
           </div>
@@ -158,13 +236,14 @@
             <h2>Education</h2>
             <div class="education-item">
               <div class="education-header d-flex flex-column gap-1 mb-3">
-                <h3>Bachelor of Science in Computer Science</h3>
+                <h3>B.S. in Computer Science, Indiana State University</h3>
                 <span class="school-name">Indiana State University</span>
                 <span class="date-range">Graduated 2021</span>
               </div>
+              <span>GPA: 3.7/4.0</span>
               <p class="education-description">
-                Completed a comprehensive computer science curriculum with focus on software
-                development, databases, and web technologies.
+                Relevant Coursework: Web Development, Data Structures, Algorithms, Database Systems,
+                Software Engineering
               </p>
             </div>
             <div class="education-item">
@@ -178,9 +257,18 @@
                 certifications.
               </p>
               <ul class="education-list">
-                <li>Advanced Vue.js Development</li>
-                <li>Full Stack Web Development</li>
-                <li>Modern TypeScript Practices</li>
+                <li>
+                  Actively pursue ongoing education in modern web technologies, frameworks, and best
+                  practices to stay current with industry standards.
+                </li>
+                <li>
+                  Regularly build personal and experimental projects to evaluate emerging tools,
+                  libraries, and design patterns.
+                </li>
+                <li>
+                  Expand knowledge of cloud services, containerization, and CI/CD practices for
+                  modern web deployments.
+                </li>
               </ul>
             </div>
           </div>
@@ -239,9 +327,13 @@ export default {
         { name: 'JavaScript', level: 90 },
         { name: 'Vue.js', level: 90 },
         { name: 'React', level: 60 },
+        { name: 'Angular', level: 60 },
         { name: 'TypeScript', level: 85 },
         { name: 'Node.js', level: 75 },
-        { name: 'C# / .NET', level: 70 },
+        { name: 'C# / .NET', level: 80 },
+        { name: 'HTML5 & CSS3', level: 95 },
+        { name: 'SQL & Databases', level: 70 },
+        { name: 'Git & Version Control', level: 85 },
       ],
     }
   },

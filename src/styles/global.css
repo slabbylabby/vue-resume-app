@@ -1,3 +1,5 @@
+@import 'bootstrap/dist/css/bootstrap.css';
+
 /* color palette and custom properties */
 :root {
   --vt-c-white: #ffffff;
@@ -71,8 +73,6 @@ body {
 html {
   width: 100%;
 }
-
-@import 'bootstrap/dist/css/bootstrap.css';
 
 #app {
   width: 100%;
