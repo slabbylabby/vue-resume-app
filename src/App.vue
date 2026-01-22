@@ -3,12 +3,20 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <main class="min-vh-100 min-vw-100 p-1">
-    <header class="d-flex flex-column justify-content-center">
-      <span class="text-center" style="color: #fff">
-        Under Construction! come back soon for more planned features</span
-      >
-    </header>
+  <main class="app-main">
     <RouterView />
   </main>
 </template>
+
+<style scoped>
+.app-main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* All viewports: allow natural scrolling */
+.app-main {
+  min-height: 100vh;
+}
+</style>
