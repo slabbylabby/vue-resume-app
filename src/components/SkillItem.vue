@@ -11,13 +11,18 @@
 </template>
 
 <script lang="ts">
+interface Skill {
+  name: string
+  level: number
+}
+
 export default {
   name: 'SkillItem',
   props: {
     skill: {
       type: Object,
       required: true,
-      validator: (skill: any) => {
+      validator: (skill: Skill) => {
         return skill.name && skill.level !== undefined
       },
     },
