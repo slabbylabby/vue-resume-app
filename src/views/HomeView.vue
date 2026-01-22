@@ -276,24 +276,424 @@
           <div v-if="activeSection === 'portfolio'" class="section-content fade-in">
             <h2>Portfolio Projects</h2>
             <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
-              <h3>This Resume Website</h3>
-              <div class="tech-tags d-flex gap-2 flex-wrap my-2">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Vite</span>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>This Website</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Vite</span>
+                      </div>
+                      <div class="tech-section">
+                        <h5 class="text-muted small mb-2">Backend</h5>
+                        <div class="tech-tags d-flex gap-2 flex-wrap">
+                          <span class="tech-tag">AWS</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>A modern, responsive resume website built with Vue 3, TypeScript, and Vite.</p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <!-- Bootstrap Carousel Placeholder -->
+                    <div id="thisWebsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="@/assets/mainPhotos/mainSite.png"
+                            alt="This Website"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p>A modern, responsive resume website built with Vue 3, TypeScript, and Vite.</p>
             </div>
             <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
-              <h3>IVM SmartHub</h3>
-              <div class="tech-tags d-flex gap-2 flex-wrap my-2">
-                <span class="tech-tag">Vue.js</span>
-                <span class="tech-tag">C#/.NET</span>
-                <span class="tech-tag">SQL</span>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>TKO Doxies</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Javascript</span>
+                        <span class="tech-tag">Jquery</span>
+                        <span class="tech-tag">Weebly</span>
+                      </div>
+                    </div>
+                    <div class="tech-section">
+                      <h5 class="text-muted small mb-2">Backend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Velo</span>
+                        <span class="tech-tag">Wix</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Dachshund Breeder Website – A charming, responsive website showcasing available
+                    puppies, breeding information, and care resources, designed to connect potential
+                    owners with the breeder.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <div id="ivmSmartHubCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div
+                          v-for="(image, index) in doxiesImages"
+                          :key="index"
+                          :class="['carousel-item', { active: index === 0 }]"
+                        >
+                          <img
+                            :src="image.src"
+                            :alt="image.alt"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(index, 'doxies')"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-slide="prev"
+                      >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-slide="next"
+                      >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p>
-                Internal application featuring real-time data visualization and user management.
-              </p>
+            </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>McMichen Consulting LLC</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Javascript</span>
+                        <span class="tech-tag">Jquery</span>
+                      </div>
+                      <div class="tech-section">
+                        <h5 class="text-muted small mb-2">Backend</h5>
+                        <div class="tech-tags d-flex gap-2 flex-wrap">
+                          <span class="tech-tag">AWS</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Consulting Company Website – A clean, professional site highlighting services,
+                    expertise, and company vision, designed to establish an online presence for a
+                    growing consulting business.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <!-- Bootstrap Carousel Placeholder -->
+                    <div id="thisWebsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="@/assets/mainPhotos/mcmichen.png"
+                            alt="mcMichen Consulting LLC"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>IVM SmartHub</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Vue.js</span>
+                      </div>
+                    </div>
+                    <div class="tech-section">
+                      <h5 class="text-muted small mb-2">Backend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">C#/.NET</span>
+                        <span class="tech-tag">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Smart Vending Inventory System – A web-based platform that tracks inventory,
+                    monitors sales, and manages restocking for smart vending machines, providing
+                    real-time insights and analytics to optimize operations.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <div id="ivmSmartHubCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="@/assets/mainPhotos/ivmphotos/ivm smarthub1.png"
+                            alt="IVM SmartHub Screenshot 1"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(0)"
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="@/assets/mainPhotos/ivmphotos/ivm-machine-connection-768x439.png"
+                            alt="IVM Machine Connection"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(1)"
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="@/assets/mainPhotos/ivmphotos/ivm-vend.jpg"
+                            alt="IVM Vend"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(2)"
+                          />
+                        </div>
+                        <div class="carousel-item">
+                          <img
+                            src="@/assets/mainPhotos/ivmphotos/smarthub-item-summary-screenshot.jpg"
+                            alt="SmartHub Item Summary"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(3)"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-slide="prev"
+                      >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-slide="next"
+                      >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>IVM</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Javascript</span>
+                        <span class="tech-tag">Jquery</span>
+                        <span class="tech-tag">Kendo</span>
+                      </div>
+                    </div>
+                    <div class="tech-section">
+                      <h5 class="text-muted small mb-2">Backend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">C#/.NET</span>
+                        <span class="tech-tag">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Internal Inventory Management System – A secure, internal platform for tracking
+                    stock, managing orders, and generating reports, streamlining inventory
+                    operations for company teams.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <div id="ivmSmartHubCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <div
+                            class="d-flex align-items-center justify-content-center"
+                            style="height: 250px; background-color: #e9ecef"
+                          >
+                            <span class="text-muted">No photos available</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>Pedcor Companies</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Javascript</span>
+                        <span class="tech-tag">Jquery</span>
+                      </div>
+                    </div>
+                    <div class="tech-section">
+                      <h5 class="text-muted small mb-2">Backend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">C#/.NET</span>
+                        <span class="tech-tag">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Apartment Company Website – A responsive, user-friendly website showcasing
+                    available properties, amenities, and company information to enhance resident
+                    engagement and brand presence.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <div id="pedcor1Carousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div
+                          v-for="(image, index) in pedcor1Images"
+                          :key="index"
+                          :class="['carousel-item', { active: index === 0 }]"
+                        >
+                          <img
+                            :src="image.src"
+                            :alt="image.alt"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(index, 'pedcor1')"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#pedcor1Carousel"
+                        data-bs-slide="prev"
+                      >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#pedcor1Carousel"
+                        data-bs-slide="next"
+                      >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>Pedcor Living</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">Javascript</span>
+                        <span class="tech-tag">Jquery</span>
+                      </div>
+                    </div>
+                    <div class="tech-section">
+                      <h5 class="text-muted small mb-2">Backend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">C#/.NET</span>
+                        <span class="tech-tag">SQL</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Apartment Finder Platform – A web application that allows users to search,
+                    filter, and compare apartment listings with interactive maps, detailed property
+                    info, and contact tools for easy leasing.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <div id="pedcorCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div
+                          v-for="(image, index) in pedcorImages"
+                          :key="index"
+                          :class="['carousel-item', { active: index === 0 }]"
+                        >
+                          <img
+                            :src="image.src"
+                            :alt="image.alt"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                            @click="openImageModal(index, 'pedcor')"
+                          />
+                        </div>
+                      </div>
+                      <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#pedcorCarousel"
+                        data-bs-slide="prev"
+                      >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#pedcorCarousel"
+                        data-bs-slide="next"
+                      >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
               <h3>Additional Projects</h3>
@@ -303,9 +703,63 @@
                 projects.
               </p>
             </div>
+            <div class="portfolio-item bg-light rounded p-4 border-start border-3 border-success">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <h3>Product IMS Software demo for Carrier</h3>
+                  <div class="tech-stack mb-3">
+                    <div class="tech-section mb-3">
+                      <h5 class="text-muted small mb-2">Frontend</h5>
+                      <div class="tech-tags d-flex gap-2 flex-wrap">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">TypeScript</span>
+                      </div>
+                      <div class="tech-section">
+                        <h5 class="text-muted small mb-2">Backend</h5>
+                        <div class="tech-tags d-flex gap-2 flex-wrap">
+                          <span class="tech-tag">Vercel</span>
+                          <span class="tech-tag">NoSQL</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    Air Conditioner Inventory Management System – A web-based platform for tracking
+                    stock, managing orders, and generating reports, streamlining inventory
+                    operations for an air conditioning company.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div class="portfolio-carousel bg-white rounded border p-3">
+                    <!-- Bootstrap Carousel Placeholder -->
+                    <div id="thisWebsiteCarousel" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img
+                            src="@/assets/mainPhotos/carrier.png"
+                            alt="This Website"
+                            class="d-block w-100 carousel-image-clickable"
+                            style="height: 250px; object-fit: cover"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </section>
+    </div>
+
+    <!-- Image Modal -->
+    <div v-if="showImageModal" class="image-modal-overlay" @click="closeImageModal">
+      <div class="image-modal-content" @click.stop>
+        <button class="image-modal-close" @click="closeImageModal">&times;</button>
+        <img :src="selectedImage" :alt="selectedImageAlt" class="image-modal-img" />
+        <p class="image-modal-caption">{{ selectedImageAlt }}</p>
+      </div>
     </div>
   </article>
 </template>
@@ -323,6 +777,102 @@ export default {
     return {
       darkMode: false,
       activeSection: 'about' as 'about' | 'experience' | 'education' | 'portfolio',
+      showImageModal: false,
+      selectedImage: '',
+      selectedImageAlt: '',
+      ivmImages: [
+        {
+          src: new URL('@/assets/mainPhotos/ivmphotos/ivm smarthub1.png', import.meta.url).href,
+          alt: 'IVM SmartHub Screenshot 1',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/ivmphotos/ivm-machine-connection-768x439.png',
+            import.meta.url,
+          ).href,
+          alt: 'IVM Machine Connection',
+        },
+        {
+          src: new URL('@/assets/mainPhotos/ivmphotos/ivm-vend.jpg', import.meta.url).href,
+          alt: 'IVM Vend',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/ivmphotos/smarthub-item-summary-screenshot.jpg',
+            import.meta.url,
+          ).href,
+          alt: 'SmartHub Item Summary',
+        },
+      ],
+      doxiesImages: [
+        {
+          src: new URL(
+            '@/assets/mainPhotos/doxies/Screenshot 2026-01-22 145150.png',
+            import.meta.url,
+          ).href,
+          alt: 'Doxies Screenshot 1',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/doxies/Screenshot 2026-01-22 145201.png',
+            import.meta.url,
+          ).href,
+          alt: 'Doxies Screenshot 2',
+        },
+      ],
+      pedcorImages: [
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 144939.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Living Screenshot 1',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 144957.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Living Screenshot 2',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 145027.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Living Screenshot 3',
+        },
+      ],
+      pedcor1Images: [
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144659.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Company Website Screenshot 1',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144711.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Company Website Screenshot 2',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144722.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Company Website Screenshot 3',
+        },
+        {
+          src: new URL(
+            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144736.png',
+            import.meta.url,
+          ).href,
+          alt: 'Pedcor Company Website Screenshot 4',
+        },
+      ],
       skills: [
         { name: 'JavaScript', level: 90 },
         { name: 'Vue.js', level: 90 },
@@ -341,6 +891,25 @@ export default {
     setActiveSection(section: 'about' | 'experience' | 'education' | 'portfolio'): void {
       this.activeSection = section
     },
+    openImageModal(index: number, portfolio: string = 'ivm'): void {
+      let images: Array<{ src: string; alt: string }> = this.ivmImages
+      if (portfolio === 'pedcor') {
+        images = this.pedcorImages
+      } else if (portfolio === 'pedcor1') {
+        images = this.pedcor1Images
+      } else if (portfolio === 'doxies') {
+        images = this.doxiesImages
+      }
+      const image = images[index]
+      this.selectedImage = image.src
+      this.selectedImageAlt = image.alt
+      this.showImageModal = true
+      document.body.style.overflow = 'hidden'
+    },
+    closeImageModal(): void {
+      this.showImageModal = false
+      document.body.style.overflow = 'auto'
+    },
     downloadFile(): void {
       const fileUrl = new URL('@/assets/resumePdfs/sethbartelcsresume.pdf', import.meta.url).href
       const fileName = 'SethBartelResume.pdf'
@@ -354,3 +923,81 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+#ivmSmartHubCarousel .carousel-control-prev-icon,
+#ivmSmartHubCarousel .carousel-control-next-icon,
+#pedcor1Carousel .carousel-control-prev-icon,
+#pedcor1Carousel .carousel-control-next-icon,
+#pedcorCarousel .carousel-control-prev-icon,
+#pedcorCarousel .carousel-control-next-icon {
+  filter: brightness(0) saturate(100%);
+}
+
+.carousel-image-clickable {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.carousel-image-clickable:hover {
+  opacity: 0.8;
+}
+
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-modal-img {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.image-modal-caption {
+  color: white;
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.image-modal-close:hover {
+  transform: scale(1.2);
+}
+</style>
