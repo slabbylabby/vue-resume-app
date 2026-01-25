@@ -456,40 +456,17 @@
                   <div class="portfolio-carousel bg-white rounded border p-3">
                     <div id="ivmSmartHubCarousel" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
-                        <div class="carousel-item active">
+                        <div
+                          v-for="(image, index) in ivmImages"
+                          :key="index"
+                          :class="['carousel-item', { active: index === 0 }]"
+                        >
                           <img
-                            src="@/assets/mainPhotos/ivmphotos/ivm smarthub1.png"
-                            alt="IVM SmartHub Screenshot 1"
+                            :src="image.src"
+                            :alt="image.alt"
                             class="d-block w-100 carousel-image-clickable"
                             style="height: 250px; object-fit: cover"
-                            @click="openImageModal(0)"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            src="@/assets/mainPhotos/ivmphotos/ivm-machine-connection-768x439.png"
-                            alt="IVM Machine Connection"
-                            class="d-block w-100 carousel-image-clickable"
-                            style="height: 250px; object-fit: cover"
-                            @click="openImageModal(1)"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            src="@/assets/mainPhotos/ivmphotos/ivm-vend.jpg"
-                            alt="IVM Vend"
-                            class="d-block w-100 carousel-image-clickable"
-                            style="height: 250px; object-fit: cover"
-                            @click="openImageModal(2)"
-                          />
-                        </div>
-                        <div class="carousel-item">
-                          <img
-                            src="@/assets/mainPhotos/ivmphotos/smarthub-item-summary-screenshot.jpg"
-                            alt="SmartHub Item Summary"
-                            class="d-block w-100 carousel-image-clickable"
-                            style="height: 250px; object-fit: cover"
-                            @click="openImageModal(3)"
+                            @click="openImageModal(index, 'ivm')"
                           />
                         </div>
                       </div>
@@ -782,94 +759,63 @@ export default {
       selectedImageAlt: '',
       ivmImages: [
         {
-          src: new URL('@/assets/mainPhotos/ivmphotos/ivm smarthub1.png', import.meta.url).href,
-          alt: 'IVM SmartHub Screenshot 1',
+          src: new URL('@/assets/mainPhotos/ivmPhotos/smarthubLogin.png', import.meta.url).href,
+          alt: 'IVM SmartHub Login Screen',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/ivmphotos/ivm-machine-connection-768x439.png',
-            import.meta.url,
-          ).href,
-          alt: 'IVM Machine Connection',
+          src: new URL('@/assets/mainPhotos/ivmPhotos/smarthubMachineHealth.png', import.meta.url)
+            .href,
+          alt: 'IVM SmartHub Machine Health',
         },
         {
-          src: new URL('@/assets/mainPhotos/ivmphotos/ivm-vend.jpg', import.meta.url).href,
-          alt: 'IVM Vend',
+          src: new URL('@/assets/mainPhotos/ivmPhotos/smarthubReporting.jpg', import.meta.url).href,
+          alt: 'IVM SmartHub Reporting',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/ivmphotos/smarthub-item-summary-screenshot.jpg',
-            import.meta.url,
-          ).href,
-          alt: 'SmartHub Item Summary',
+          src: new URL('@/assets/mainPhotos/ivmPhotos/smarthubVendActivity.jpg', import.meta.url)
+            .href,
+          alt: 'IVM SmartHub Vend Activity',
         },
       ],
       doxiesImages: [
         {
-          src: new URL(
-            '@/assets/mainPhotos/doxies/Screenshot 2026-01-22 145150.png',
-            import.meta.url,
-          ).href,
-          alt: 'Doxies Screenshot 1',
+          src: new URL('@/assets/mainPhotos/doxies/doxiesHome.png', import.meta.url).href,
+          alt: 'Doxies Home Screenshot 1',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/doxies/Screenshot 2026-01-22 145201.png',
-            import.meta.url,
-          ).href,
-          alt: 'Doxies Screenshot 2',
+          src: new URL('@/assets/mainPhotos/doxies/doxiesHome2.png', import.meta.url).href,
+          alt: 'Doxies Home Screenshot 2',
         },
       ],
       pedcorImages: [
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 144939.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor2/pedcorAptScreen1.png', import.meta.url).href,
           alt: 'Pedcor Living Screenshot 1',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 144957.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor2/pedcorAptScreen2.png', import.meta.url).href,
           alt: 'Pedcor Living Screenshot 2',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor2/Screenshot 2026-01-22 145027.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor2/pedcorAptScreen3.png', import.meta.url).href,
           alt: 'Pedcor Living Screenshot 3',
         },
       ],
       pedcor1Images: [
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144659.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor1/pedcorHomeScreen.png', import.meta.url).href,
           alt: 'Pedcor Company Website Screenshot 1',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144711.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor1/pedcorHomeScreen2.png', import.meta.url).href,
           alt: 'Pedcor Company Website Screenshot 2',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144722.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor1/pedcorHomeScreen3.png', import.meta.url).href,
           alt: 'Pedcor Company Website Screenshot 3',
         },
         {
-          src: new URL(
-            '@/assets/mainPhotos/pedcor1/Screenshot 2026-01-22 144736.png',
-            import.meta.url,
-          ).href,
+          src: new URL('@/assets/mainPhotos/pedcor1/pedcorHomeScreen4.png', import.meta.url).href,
           alt: 'Pedcor Company Website Screenshot 4',
         },
       ],
