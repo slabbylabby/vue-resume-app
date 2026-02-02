@@ -344,7 +344,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="portfolio-carousel bg-white rounded border p-3">
-                    <div id="ivmSmartHubCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div id="doxiesCarousel" class="carousel slide" data-bs-ride="carousel">
                       <div class="carousel-inner">
                         <div
                           v-for="(image, index) in doxiesImages"
@@ -363,7 +363,7 @@
                       <button
                         class="carousel-control-prev"
                         type="button"
-                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-target="#doxiesCarousel"
                         data-bs-slide="prev"
                       >
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -372,7 +372,7 @@
                       <button
                         class="carousel-control-next"
                         type="button"
-                        data-bs-target="#ivmSmartHubCarousel"
+                        data-bs-target="#doxiesCarousel"
                         data-bs-slide="next"
                       >
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
